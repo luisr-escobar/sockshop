@@ -4,7 +4,7 @@ metadata:
   name: carts-remediation
 spec:
   remediations:
-    - problemType: Response time degradation
+    - problemType: Failure rate increase
       actionsOnOpen:
         - action: trigger-servicenow-flow
           name: Trigger ServiceNow Flow
@@ -13,10 +13,3 @@ spec:
             flowApiPath: /api/dynat/keptn_create_incident # mandatory parameter
             httpMethod: POST # mandatory parameter
             retries: 10
-    - problemType: Failure rate increase
-      actionsOnOpen:
-        - action: toggle-feature
-          name: Toogle feature flag
-          description: Toogle feature flag EnablePromotion to OFF
-          value: 
-            EnablePromotion: "off"
