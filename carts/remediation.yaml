@@ -8,8 +8,13 @@ spec:
       actionsOnOpen:
         - action: trigger-servicenow-flow
           name: Trigger ServiceNow Flow
-          description: Creates an Incident
+          description: Creates a ServiceNow incident
           value:
-            flowApiPath: /api/dynat/keptn_create_incident # mandatory parameter
-            httpMethod: POST # mandatory parameter
+            flowApiPath: /api/dynat/keptn_create_incident
+            httpMethod: POST
             retries: 10
+        - action: toggle-feature
+          name: Toogle feature flag
+          description: Toogle feature flag EnablePromotion to OFF
+          value:
+            EnablePromotion: "off"
