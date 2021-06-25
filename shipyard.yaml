@@ -91,6 +91,6 @@ spec:
             - name: "get-action"
             - name: "action"
             - name: "evaluation"
-              triggeredAfter: "15m"
+              triggeredAfter: "2m"
               properties:
-                timeframe: "15m"
+                timeframe: "2m"
